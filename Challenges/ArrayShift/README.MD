@@ -14,4 +14,4 @@ new value added at the middle index.
 
 ## Solution
 
-![Whiteboard](assets/ArrayShift.jpg)
+![Whiteboard](../../assets/ArrayShift.jpg)
