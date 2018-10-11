@@ -13,9 +13,9 @@ namespace BinarySearch
         {
             int first = 0;
             int last = arr.Length - 1;
-            int middle = (first + last) / 2; ;
             while(first <= last)
             {
+            int middle = (first + last) / 2; ;
                 if (arr[middle] == num)
                 {
                     return middle;
