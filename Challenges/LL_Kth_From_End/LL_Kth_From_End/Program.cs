@@ -15,23 +15,19 @@ namespace LL_Kth_From_End
 
             int count = 0;
             Node current = ll.Head;
-            Node current2;
+            Node current2 = ll.Head;
 
             while(current.Next != null)
-            {
-                if(k == count)
+            {  
+                if(k <= count)
                 {
-                    current2 = ll.Head;
-                }
-                if(k > count)
-                {
-                    current2 = ll.Head.Next;
+                    current2 = current2.Next;
                 }
                 current = current.Next;
                 count++;
             }
 
-            return ll;
+            return current2.Value;
         } 
         public static LList MakeList()
         {
