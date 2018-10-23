@@ -10,4 +10,4 @@ Make a Queue using two stacks
 
 ## Whiteboard
 
-![screenshot](../../assets/queuewithstacks.PNG)
+![screenshot](../../assets/queuewithstacks.jpg)
