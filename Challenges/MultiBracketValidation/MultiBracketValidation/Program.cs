@@ -8,10 +8,10 @@ namespace MultiBracketValidation
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            MultiBracketValidation("(()})");
+            MultiBrackValidation("{}(()})");
         }
 
-        static bool MultiBracketValidation(string brackets)
+        public static bool MultiBrackValidation(string brackets)
         {
             char[] charArr = brackets.ToCharArray();
             Stack bracketStack = new Stack(null);
