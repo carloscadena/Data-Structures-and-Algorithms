@@ -11,6 +11,10 @@ namespace MultiBracketValidation
             MultiBrackValidation("{}(()})");
         }
 
+        /// <summary>
+        /// Method to test string of brackets
+        /// </summary>
+        /// <param name="brackets">string to be evaluated</param>
         public static bool MultiBrackValidation(string brackets)
         {
             char[] charArr = brackets.ToCharArray();
