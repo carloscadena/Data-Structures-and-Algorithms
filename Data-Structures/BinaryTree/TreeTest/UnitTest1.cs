@@ -26,19 +26,52 @@ namespace TreeTest
 
             List<Node> list = tree.PreOrder(n1);
 
-            Assert.True(list[1].Value == 2);
+            Assert.True(list[0].Value == 1);
+        }
+
+        [Fact]
+        public void InOrderTest()
+        {
+            BinaryTree.Classes.BinaryTree tree = new BinaryTree.Classes.BinaryTree(n1);
+            tree.Root.LChild = n2;
+            tree.Root.RChild = n3;
+            tree.Root.LChild.LChild = n4;
+            tree.Root.RChild.RChild = n5;
+            tree.Root.RChild.RChild.LChild = n6;
+
+            List<Node> list = tree.InOrder(n1);
+
+            Assert.True(list[0].Value == 1);
+        }
+
+        [Fact]
+        public void PostOrderTest()
+        {
+            BinaryTree.Classes.BinaryTree tree = new BinaryTree.Classes.BinaryTree(n1);
+            tree.Root.LChild = n2;
+            tree.Root.RChild = n3;
+            tree.Root.LChild.LChild = n4;
+            tree.Root.RChild.RChild = n5;
+            tree.Root.RChild.RChild.LChild = n6;
+
+            List<Node> list = tree.PostOrder(n1);
+
+            Assert.True(list[0].Value == 1);
+
         }
 
         //[Fact]
-        //public void InOrderTest()
+        //public void BSTSearchTest()
         //{
+        //    BinaryTree.Classes.BinarySearchTree tree = new BinaryTree.Classes.BinarySearchTree(n1);
+        //    tree.Add(n2);
+        //    tree.Add(n3);
+        //    tree.Add(n4);
+        //    tree.Add(n5);
+        //    tree.Add(n6);
+            
 
+        //    Assert.True(tree.Search(6) == 6);
         //}
-
-        //[Fact]
-        //public void PostOrderTest()
-        //{
-
-      
     }
 }
