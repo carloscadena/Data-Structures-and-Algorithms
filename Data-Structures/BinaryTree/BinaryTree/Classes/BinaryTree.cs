@@ -13,35 +13,32 @@ namespace BinaryTree.Classes
             Root = node;
         }
 
+        List<Node> preList = new List<Node>();
+        List<Node> inList = new List<Node>();
+        List<Node> postList = new List<Node>();
+
         public List<Node> PreOrder(Node root)
         {
-            List<Node> list = new List<Node>();
-            list.Add(root);
+            preList.Add(root);
             if (root.LChild != null) PreOrder(root.LChild);
             if (root.RChild != null) PreOrder(root.RChild);
-            return list;
+            return preList;
         }
 
         public List<Node> InOrder(Node root)
         {
-            List<Node> list = new List<Node>();
             if (root.LChild != null) InOrder(root.LChild);
-            list.Add(root);
+            inList.Add(root);
             if (root.RChild != null) InOrder(root.RChild);
-            return list;
+            return inList;
         }
 
         public List<Node> PostOrder(Node root)
         {
-            List<Node> list = new List<Node>();
             if (root.LChild != null) InOrder(root.LChild);
             if (root.RChild != null) InOrder(root.RChild);
-            list.Add(root);
-            return list;
+            postList.Add(root);
+            return postList;
         }
-
-      
-
-
     }
 }
