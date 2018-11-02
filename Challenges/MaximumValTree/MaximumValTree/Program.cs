@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace MaximumValTree
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -25,7 +25,7 @@ namespace MaximumValTree
             FindMaxValue(tree);
         }
 
-        static int FindMaxValue(BinaryTree.Classes.BinaryTree tree)
+        public static int FindMaxValue(BinaryTree.Classes.BinaryTree tree)
         {
             int temp = 0;
 
