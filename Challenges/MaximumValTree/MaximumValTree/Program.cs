@@ -25,11 +25,19 @@ namespace MaximumValTree
             FindMaxValue(tree);
         }
 
-        static void FindMaxValue(BinaryTree.Classes.BinaryTree tree)
+        static int FindMaxValue(BinaryTree.Classes.BinaryTree tree)
         {
             int temp = 0;
 
             List<Node> list = tree.PreOrder(tree.Root);
+
+            foreach (var item in list)
+            {
+                if (item.Value > temp) temp = item.Value;
+
+            }
+            Console.WriteLine($"The max Value in this tree is {temp}");
+            return temp;
         }
     }
 }
