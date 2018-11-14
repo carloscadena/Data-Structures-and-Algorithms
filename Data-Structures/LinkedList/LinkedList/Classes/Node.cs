@@ -16,6 +16,11 @@ namespace LinkedList.Classes
         public Node Next { get; set; }
 
         /// <summary>
+        /// Key stored in case of collisions in hash table
+        /// </summary>
+        public string Key { get; set; }
+
+        /// <summary>
         /// constructor for our nodes
         /// </summary>
         /// <param name="value">the value contained in the node</param>
