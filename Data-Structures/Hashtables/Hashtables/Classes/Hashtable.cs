@@ -10,7 +10,7 @@ namespace Hashtables.Classes
         /// <summary>
         ///  Hash table
         /// </summary>
-        Node[] table = new Node[1024];
+        public Node[] table = new Node[1024];
 
         /// <summary>
         /// Hash the key and map to spot in table
@@ -35,14 +35,15 @@ namespace Hashtables.Classes
         /// <returns>return true or false</returns>
         public bool Contains(string key)
         {
-            if (table[GetHash(key)].Value == null) return false;
+            if (table[GetHash(key)] == null) return false;
             else
             {
                 Node current = table[GetHash(key)];
+                if (current.Key == key) return true;
                 while (current.Next != null)
                 {
-                    if (current.Key == key) return true;
                     current = current.Next;
+                    if (current.Key == key) return true;
                 }
                 return false;
             }
@@ -55,7 +56,9 @@ namespace Hashtables.Classes
         /// <param name="value">value to be stored with key</param>
         public void Add(string key, object value)
         {
-            if (table[GetHash(key)].Value == null) table[GetHash(key)].Value = value;
+            Node nodeToAdd = new Node(value);
+            nodeToAdd.Key = key;
+            if (table[GetHash(key)] == null) table[GetHash(key)] = nodeToAdd;
             else
             {
                 Node current = table[GetHash(key)];
@@ -65,8 +68,6 @@ namespace Hashtables.Classes
                 }
                 current.Next = new Node(value);
             }
-
-
         }
 
         /// <summary>
