@@ -8,7 +8,6 @@ namespace Hashtables
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            GetHash("catan");
         }
 
         

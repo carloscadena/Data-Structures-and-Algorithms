@@ -24,7 +24,6 @@ namespace Hashtables.Classes
             {
                 hashVal += (int)letter;
             }
-            Console.WriteLine($"{hashVal}");
             hashVal = (hashVal * 599) % table.Length;
             return hashVal;
         }
@@ -47,8 +46,6 @@ namespace Hashtables.Classes
                 }
                 return false;
             }
-
-            return true;
         }
 
         /// <summary>
@@ -75,11 +72,22 @@ namespace Hashtables.Classes
         /// <summary>
         /// Find val in string
         /// </summary>
-        /// <param name="key"></param>
-        /// <returns></returns>
-        static Node Find(string key)
+        /// <param name="key">key to be found</param>
+        /// <returns>returns value at hashed key index</returns>
+        public object Find(string key)
         {
-
+           
+            if (table[GetHash(key)].Key == key) return table[GetHash(key)].Value;
+            else
+            {
+                Node current = table[GetHash(key)];
+                while (current.Next != null)
+                {
+                    if (current.Key == key) return table[GetHash(key)].Value;
+                    current = current.Next;
+                }
+            }
+            return "The key does not exist in the table";
         }
     }
 }
