@@ -84,9 +84,10 @@ namespace Hashtables.Classes
                 Node current = table[GetHash(key)];
                 while (current.Next != null)
                 {
-                    if (current.Key == key) return table[GetHash(key)].Value;
+                    if (current.Key == key) return current.Value;
                     current = current.Next;
                 }
+                if (current.Key == key) return current.Value;
             }
             return "The key does not exist in the table";
         }
