@@ -40,7 +40,7 @@ namespace HashtablesTest
             table.Add("cat", "mouse");
             table.Add("tac", "ouch");
 
-            Assert.True((string)table.Find("tac") == "ouch");
+            Assert.Equal("ouch", (string)table.Find("tac"));
         }
 
         /// <summary>

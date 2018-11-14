@@ -66,7 +66,7 @@ namespace Hashtables.Classes
                 {
                     current = current.Next;
                 }
-                current.Next = new Node(value);
+                current.Next = nodeToAdd;
             }
         }
 
