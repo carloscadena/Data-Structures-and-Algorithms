@@ -1,11 +1,12 @@
 # Intersection of binary trees
-<!-- Short summary or background information -->
+Find the common values in two binary trees
 
 ## Challenge
-<!-- Description of the challenge -->
+Return a list of common values from two binary trees.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Time: O(n) 
+Space: O(n)
 
 ## Solution
-<!-- Embedded whiteboard image -->
+![](assets/treeintersection.jpg)
