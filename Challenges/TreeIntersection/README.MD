@@ -9,4 +9,4 @@ Time: O(n)
 Space: O(n)
 
 ## Solution
-![](assets/treeintersection.jpg)
+![](../../assets/treeintersection.jpg)
