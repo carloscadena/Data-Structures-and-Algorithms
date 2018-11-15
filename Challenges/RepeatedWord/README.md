@@ -1,11 +1,13 @@
 # First repeated word
-<!-- Short summary or background information -->
+Find first repeated word in a string
 
 ## Challenge
-<!-- Description of the challenge -->
+Without using any of the built in methods to your class, find the first repeated word in a lengthy string.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+* Big O
+- Time O(n)
+- Space O(n)
 
 ## Solution
-<!-- Embedded whiteboard image -->
+![](../../assets/repeatedword.jpg)
