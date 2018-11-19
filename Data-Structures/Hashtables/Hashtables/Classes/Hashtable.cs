@@ -56,15 +56,22 @@ namespace Hashtables.Classes
         /// <param name="value">value to be stored with key</param>
         public void Add(string key, object value)
         {
+            int idx = GetHash(key);
+
             Node nodeToAdd = new Node(value);
             nodeToAdd.Key = key;
-            if (table[GetHash(key)] == null) table[GetHash(key)] = nodeToAdd;
+            if (table[idx] == null) table[idx] = nodeToAdd;
             else
             {
-                Node current = table[GetHash(key)];
-                while(current.Next != null)
+                Node current = table[idx];
+                while (current != null)
                 {
                     current = current.Next;
+                    if (current.Key == key)
+                    {
+                        current.Value = value;
+                        return;
+                    };
                 }
                 current.Next = nodeToAdd;
             }
