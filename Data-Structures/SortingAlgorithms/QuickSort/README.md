@@ -1,4 +1,4 @@
-# Sorting Algorithms - InsertionSort
+# Sorting Algorithms - QuickSort
 
 ## Description/Challenge
 Implement an insertion sort, quick sort, and merge sort.
